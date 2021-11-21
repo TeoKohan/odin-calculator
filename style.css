@@ -24,10 +24,9 @@ body {
     padding: 16px;
 
     border-radius: 16px;
-    border: 2px solid lightgray;
-    box-shadow: grey 8px 8px 8px 8px;
+    border: 2px solid black;
 
-    background-color:rgb(39, 61, 102);
+    background-color:#d4d4d4d3;
 
     display: flex;
     flex-direction: column;
@@ -41,10 +40,10 @@ body {
     gap: 16px;
 
     border-radius: 8px;
-    border: 2px solid whitesmoke;
+    border: 2px solid black;
 
     height: 124px;
-    background-color:darkkhaki;
+    background-color:rgb(240, 238, 216);
 }
 
 #operation, #result {
@@ -77,11 +76,11 @@ body {
 }
 
 #clear {
-    background-color: royalblue;
+    background-color: rgb(204, 235, 255);
 }
 
 #delete {
-    background-color:indianred;
+    background-color: rgb(255, 196, 189);
 }
 
 button {
@@ -92,11 +91,9 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid transparent;
+    border: 2px solid black;
     border-radius: 4px;
-    color: whitesmoke;
-    background-color: slategray;
-    box-shadow: lightgray 2px 0px 0px 0px, dimgray 2px 2px 0px 0px;
+    background-color: whitesmoke;
 
     font-size: 24px;
 }
