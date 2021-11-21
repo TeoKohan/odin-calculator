@@ -5,6 +5,19 @@ operators = {
     DIVIDE: 'divide'
 }
 
+function operate(a, o, b) {
+    switch(o) {
+        case operators.ADD:
+            return add(a, b);
+        case operators.SUBTRACT:
+            return subtract(a, b);
+        case operators.MULTIPLY:
+            return multiply(a, b);
+        case operators.DIVIDE:
+            return divide(a, b);
+    }
+}
+
 function add(a, b) {
     return a + b;
 }
