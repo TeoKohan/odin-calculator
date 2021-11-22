@@ -64,16 +64,15 @@ function equality() {
 function binary(op) {
    
     if (active == 0 && operands[0] == null)
-        operands[0] = result;
+        operands[0] = result.toFixed(2);;
 
     if (active == 2) {
-            result = equal(...operands).toFixed(1);
+            result = equal(...operands);
             operands = [result, null, null];
     }
 
     operands[1] = op.symbol;
     active = 2;
-
     update();
 }
 
@@ -85,11 +84,11 @@ function write(s) {
 function update() {
     full_text = operands.reduce((a, b) => (a == ' 0' ? '' : a) + ' ' + (b ?? ''), '');
     operation_text.textContent = full_text.slice(-23);
-    result_text.textContent = Number(result).toFixed(1);
+    result_text.textContent = Number(result).toFixed(2);
 }
 
-let operation_text  = document.querySelector('#operation .text');
-let result_text     = document.querySelector('#result .text');
+let operation_text = document.querySelector('#operation .text');
+let result_text    = document.querySelector('#result .text');
 
 let operands;
 let result;
