@@ -15,7 +15,7 @@ function divide(a, b) {
 function dot() { if (operands[active] !== null && !operands[active].includes('.')) write('.'); }
 
 function equal(a, op, b) { 
-    return active > 1 ? operators[op].function(a, b) : (a ?? 0); 
+    return active > 1 ? operators[op].function(a, b) : (Number(a) ?? 0); 
 }
 
 operators = {
@@ -64,7 +64,7 @@ function equality() {
 function binary(op) {
    
     if (active == 0 && operands[0] == null)
-        operands[0] = result.toFixed(2);;
+        operands[0] = result.toFixed(2);
 
     if (active == 2) {
             result = equal(...operands);
