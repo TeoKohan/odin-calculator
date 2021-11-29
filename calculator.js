@@ -42,7 +42,7 @@ function calculator_delete() {
             operands[0] = operands[0].slice(0, operands[0].length-1);
             break;
         case 2:
-            if (operands[2].length == 0) {
+            if (operands[2]?.length != 0) {
                 operands[1] = null;
                 active = 0;
             }
